@@ -13,7 +13,7 @@ Vagrant.configure('2') do |config|
       override.vm.box = "digital_ocean"
       override.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
       override.ssh.private_key_path = "~/.ssh/vagrant"
-      override.vm.hostname = "ftp.fewd.ninja"
+      override.vm.hostname = "fewd.ninja"
 
       ocean.token = ENV["DIGITAL_OCEAN_TOKEN"]
       ocean.size = "512mb"
