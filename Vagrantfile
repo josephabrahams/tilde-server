@@ -2,7 +2,7 @@
 
 Vagrant.configure('2') do |config|
 
-  config.vm.define :ftp do |ftp|
+  config.vm.define :fewd do |ftp|
 
     # rsync only the salt roots
     ftp.vm.synced_folder ".", "/vagrant", disabled: true
@@ -32,3 +32,4 @@ Vagrant.configure('2') do |config|
   end
 
 end
+
