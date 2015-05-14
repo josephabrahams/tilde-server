@@ -1,6 +1,14 @@
-# fewd.ninja Server Provisioner
+# tilde.club Style Server Provisioner
 
-Use Vagrant to provision a Digital Ocean cloud server running Ubuntu 14.04 and using SaltStack.
+Use Vagrant to provision a Digital Ocean cloud server similar to 
+[tilde.club](https://github.com/tildeclub/tilde.club) running Ubuntu 14.04 via SaltStack.
+
+Packages included:
+
+- apache w/ userdirs enabled
+- build-essential
+- curl
+- vsftp
 
 ## Install Vagrant
 
@@ -13,20 +21,20 @@ Use Vagrant to provision a Digital Ocean cloud server running Ubuntu 14.04 and u
 
 ## Add pillar data
 
-top.sls
+salt/roots/pillar/top.sls
 
     base:
       '*':
         - groups
         - users
 
-groups.sls
+salt/roots/pillar/groups.sls
 
     groups:
       examplegroup:
         gid: 2000
 
-users.sls
+salt/roots/pillar/users.sls
 
     users:
       jdoe:
